@@ -19,6 +19,6 @@ RUN cp -r /var/www/rainloop /var/www/html
 RUN cp -r /var/www/data /var/www/html
 RUN cp /var/www/index.php /var/www/html/index.php
 
-RUN cd /var/www/; find . -type d -exec chmod 755 {} \; find . -type f -exec chmod 644 {} \;chown -R www-data:www-data .
+RUN cd /var/www/; find . -type d -exec chmod 755 {} \; ; find . -type f -exec chmod 644 {} \; ; chown -R www-data:www-data .
 
 ENTRYPOINT apachectl -DFOREGROUND
